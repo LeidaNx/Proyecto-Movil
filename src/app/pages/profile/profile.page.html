@@ -1,0 +1,17 @@
+<app-header [pageTitle]="pageTitle"></app-header>
+
+
+<ion-content>
+    <ion-card>
+    <div class="avatar">
+        <ion-avatar (click)="uploadAvatar()">
+            <img *ngIf="profile?.imageUrl; else avatarSinImagen" [src]="profile.imageUrl" alt="">
+            <ng-template #avatarSinImagen>
+                <div class="no-avatar">
+                    <p>Click Me!!!</p>
+                </div>
+            </ng-template>
+        </ion-avatar>
+    </div>
+</ion-card>
+</ion-content>

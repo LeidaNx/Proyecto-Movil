@@ -1,0 +1,46 @@
+.avatar{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.avatar ion-avatar{
+    width: 6rem;
+    height: 6rem;
+}
+
+.noAavatar {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 100%;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+}
+
+.noAvatar ion-icon{
+    height: 4rem;
+    width: 4rem;
+    align-self: center;
+    color: orangered;
+}
+
+.changePhoto {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem;
+    margin-left: 4rem;
+    position: relative;
+    z-index: 25;
+}
+
+.changePhoto ion-icon{
+    height: 1.5rem;
+    width: 1.5rem;
+    align-self: center;
+    color: purple;
+}
+

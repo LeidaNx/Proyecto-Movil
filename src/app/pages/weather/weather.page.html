@@ -1,0 +1,39 @@
+<app-header [pageTitle]="pageTitle" [pageIcon]="pageIcon"></app-header>
+
+<ion-content fullscreen>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      <div *ngIf="weather" class="card card-body">
+        <ion-item>
+          <ion-label>
+
+            <h5> {{weather.name}},  {{weather.sys.country}} </h5>
+            
+            <h3>Temperature Max: {{weather.main.temp_max}} °C</h3>
+
+            <h3>Temperature Min: {{weather.main.temp_min}} °C</h3>
+
+            <h3>Latitude: {{weather.coord.lat}}</h3>
+
+            <h3>Longitude: {{weather.coord.lon}}</h3>
+
+            <h3>Humidity: {{weather.main.humidity}}</h3>
+
+            <h3>Pressure: {{weather.main.pressure}}</h3>
+
+            <h3>Description: {{weather.weather[0].description}}</h3>
+          </ion-label>
+        </ion-item>
+      </div>
+    </ion-card-header>
+    
+  </ion-card>
+  <capacitor-google-maps #map></capacitor-google-maps>
+
+  
+</ion-content>
+
+

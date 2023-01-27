@@ -1,0 +1,27 @@
+<app-header [pageTitle]="pageTitle" [pageIcon]="pageIcon"></app-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let mascota of mascotas" (click)="openMascota(mascota)">
+      <ion-avatar slot="start" *ngIf="mascota.imageUrl; else MascotasSinImagen">
+        <img [src]="mascota.imageUrl" alt="{{mascota.nombre}}">
+      </ion-avatar>
+      <ng-template #MascotasSinImagen>
+        <ion-avatar slot="start" >
+          <ion-icon name="person-outline"></ion-icon>
+        </ion-avatar>
+      </ng-template>
+      <ion-label>
+        {{mascota.nombre}}
+      </ion-label>
+    </ion-item>  
+  </ion-list>
+
+  <ion-fab horizontal="end" vertical="bottom">
+    <ion-fab-button (click)="addMascota()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
